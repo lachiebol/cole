@@ -1,0 +1,4 @@
+- Draw board
+- Put piece on board
+- Have piece on board move
+- Have piece on board be blocked by certain conditions
