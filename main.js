@@ -72,6 +72,21 @@ function cole() {
 }
 
 
+
+document.body.addEventListener("mousemove", function () {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.2;
+    var resp = audio.play();
+
+    if (resp!== undefined) {
+        resp.then(_ => {
+            // autoplay starts!
+        }).catch(error => {
+        //show error
+        });
+    }
+})
+
 window.setInterval(cole,500);
 
 
