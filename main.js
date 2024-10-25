@@ -89,7 +89,6 @@ function linguis() {
     let lingus=document.getElementById('lingus');
     let guess=Math.floor(randomNumber(5));
     lingus.style.opacity='0';
-    console.log(guess);
     if(guess==4) {
         lingus.style.opacity=`1`;
 
@@ -100,7 +99,23 @@ function linguis() {
 
 }
 
+function youwasatheclub() {
+    let lingus=document.getElementById('youwasattheclubb');
+    let guess=Math.floor(randomNumber(5));
+    lingus.style.opacity='0';
+    if(guess==4) {
+        lingus.style.opacity=`1`;
+
+        const audio = document.getElementById("youwasattheclub");
+        audio.volume = 1;
+        var resp = audio.play();
+    }
+
+}
+
+
 window.setInterval(linguis,1000);
+window.setInterval(youwasatheclub,6000);
 
 
 document.body.addEventListener("mousemove", function () {
