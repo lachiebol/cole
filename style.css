@@ -12,9 +12,17 @@
     background-size: 100% 100%;
     /* font-family: "Kablammo", system-ui; */
     background-image: url('https://media1.tenor.com/m/f9Ek6QJFnrkAAAAd/parse-black.gif');
+    text-wrap: nowrap;
 }
 
 
+
+
+@media only screen and (max-width: 600px) { 
+    #content {
+        font-size: 30pt;
+    }
+}
 
 
 span {

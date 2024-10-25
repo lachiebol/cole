@@ -44,20 +44,21 @@ function cole() {
 
     let spans=content.children;
 
+    let {width,height} = content.getBoundingClientRect();
     for (let span of spans) {
         span.classList.add('animation');
 
         if(span.classList.contains('rotated')) {
             content.style.transform=`rotate(${randomNumber(1)}turn)`;
             
-            content.style.left=`${randomNumber(window.innerWidth)}px`;
-            content.style.top=`${randomNumber(window.innerHeight)}px`;
+            content.style.left=`${randomNumber(window.innerWidth-width)}px`;
+            content.style.top=`${randomNumber(window.innerHeight-height)}px`;
             span.classList.remove('rotated');
         } else {
             content.style.transform=`rotate(${randomNumber(1)}turn)`;
             span.classList.add('rotated');
-            content.style.left=`${randomNumber(window.innerWidth)}px`;
-            content.style.top=`${randomNumber(window.innerHeight)}px`;
+            content.style.left=`${randomNumber(window.innerWidth-width)}px`;
+            content.style.top=`${randomNumber(window.innerHeight-height)}px`;
         }
 
 
@@ -75,7 +76,7 @@ function cole() {
 
 document.body.addEventListener("mousemove", function () {
     const audio = document.querySelector("audio");
-    audio.volume = 0.2;
+    audio.volume = 0.01;
     var resp = audio.play();
 
     if (resp!== undefined) {
@@ -86,6 +87,7 @@ document.body.addEventListener("mousemove", function () {
         });
     }
 })
+
 
 window.setInterval(cole,500);
 
