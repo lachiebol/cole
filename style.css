@@ -17,11 +17,15 @@
 
 
 
+
 #aunty {
     background-size: 100% 100%;
-    background-image: url('https://preview.redd.it/29aj4lts9pe41.jpg?auto=webp&s=55372296be0002e76443d7c1810c46e39cce0e4e');
-    width:200px;
+    background-image: url('Screenshot 2024-10-25 190456.jpg');
+    width:500px;
     height:100px;
+    position: absolute;
+    transition-duration: 500ms;
+    /* transition: opacity 0.5s ease-in-out */
 }
 
 #lingus {
@@ -29,7 +33,7 @@
     background-image: url('https://preview.redd.it/29aj4lts9pe41.jpg?auto=webp&s=55372296be0002e76443d7c1810c46e39cce0e4e');
     width:100%;
     height:100%;
-    opacity: 0.1;
+    opacity: 0;
 }
 
 

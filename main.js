@@ -62,6 +62,7 @@ function cole() {
         }
 
 
+
         let letters=span.children;
         for(let letter of letters) {
 
@@ -70,12 +71,40 @@ function cole() {
             letter.style.color=`${rainbowColours[newColourIndex]}`;
         }
     }
+
+
+    let aunty=document.getElementById('aunty');
+    aunty.style.left=`${randomNumber(window.innerWidth-width)}px`;
+    aunty.style.top=`${randomNumber(window.innerHeight-height)}px`;
+
+    aunty.style.width=`${randomNumber(300)}px`;
+    aunty.style.height=`${randomNumber(300)}px`;
+
+
+    
 }
 
 
+function linguis() {
+    let lingus=document.getElementById('lingus');
+    let guess=Math.floor(randomNumber(5));
+    lingus.style.opacity='0';
+    console.log(guess);
+    if(guess==4) {
+        lingus.style.opacity=`1`;
+
+        const audio = document.getElementById("vine");
+        audio.volume = 1;
+        var resp = audio.play();
+    }
+
+}
+
+window.setInterval(linguis,1000);
+
 
 document.body.addEventListener("mousemove", function () {
-    const audio = document.querySelector("audio");
+    const audio = document.querySelector("four");
     audio.volume = 0.01;
     var resp = audio.play();
 
