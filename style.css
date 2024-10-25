@@ -16,6 +16,13 @@
 }
 
 
+#lingus {
+    background-size: 100% 100%;
+    background-image: url('https://preview.redd.it/29aj4lts9pe41.jpg?auto=webp&s=55372296be0002e76443d7c1810c46e39cce0e4e');
+    width:100px;
+    height:100px;
+
+}
 
 
 @media only screen and (max-width: 600px) { 
