@@ -104,7 +104,7 @@ window.setInterval(linguis,1000);
 
 
 document.body.addEventListener("mousemove", function () {
-    const audio = document.querySelector("four");
+    const audio = document.getElementById("four");
     audio.volume = 0.01;
     var resp = audio.play();
 
