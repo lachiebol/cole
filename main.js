@@ -85,42 +85,33 @@ function cole() {
 }
 
 
-function linguis() {
-    let lingus=document.getElementById('lingus');
-    let guess=Math.floor(randomNumber(5));
+
+function showImage(elementName,soundElementId,odds=5) {
+    let lingus=document.getElementById(elementName);
+    let guess=Math.floor(randomNumber(odds));
     lingus.style.opacity='0';
-    if(guess==4) {
+    if(guess==odds-1) {
         lingus.style.opacity=`1`;
 
-        const audio = document.getElementById("vine");
-        audio.volume = 1;
-        var resp = audio.play();
-    }
-
-}
-
-function youwasatheclub() {
-    let lingus=document.getElementById('youwasattheclubb');
-    let guess=Math.floor(randomNumber(5));
-    lingus.style.opacity='0';
-    if(guess==4) {
-        lingus.style.opacity=`1`;
-
-        const audio = document.getElementById("youwasattheclub");
-        audio.volume = 1;
+        const audio = document.getElementById(soundElementId);
+        // audio.volume = 1;
         var resp = audio.play();
     }
 
 }
 
 
-window.setInterval(linguis,1000);
-window.setInterval(youwasatheclub,6000);
+
+window.setInterval(function() {
+    showImage('lingus','vine');
+    showImage('youwasattheclubb','youwasattheclub');
+    showImage('india','spongbon');
+},1000);
 
 
 document.body.addEventListener("mousemove", function () {
     const audio = document.getElementById("four");
-    audio.volume = 0.01;
+    // audio.volume = 0.01;
     var resp = audio.play();
 
     if (resp!== undefined) {
@@ -133,7 +124,38 @@ document.body.addEventListener("mousemove", function () {
 })
 
 
+
+// Hello Nigga
+//
+//
+//
+// Can i touch you .. 
+//
+//
+//  Please 
+//
+//
+// Helloooo
+
 window.setInterval(cole,500);
 
+
+
+
+var slider = document.getElementById("myRange");
+slider.oninput = function() {
+    console.log(this.value);
+
+    let sounds=document.querySelectorAll('audio');
+
+    for (let sound of sounds) {
+        let volume=this.value/100;
+        if(volume==0.01) {
+            volume=0;
+        }
+
+        sound.volume=volume;
+    }
+}
 
 cole();

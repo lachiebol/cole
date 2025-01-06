@@ -35,6 +35,7 @@
     height:100%;
     opacity: 0;
     z-index: 100;
+    position: absolute;
 }
 
 #youwasattheclubb {
@@ -46,8 +47,20 @@
     position: absolute;
 }
 
+#india {
+    background-size: 100% 100%;
+    background-image: url('29604647085_468ff693f8_b.jpg');
+    position: absolute;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    z-index: 100;
+}
 
 
+.slider {
+    z-index: 1000;
+}
 
 @media only screen and (max-width: 600px) { 
     #content {
