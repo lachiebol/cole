@@ -103,9 +103,9 @@ function showImage(elementName,soundElementId,odds=5) {
 
 
 window.setInterval(function() {
-    showImage('lingus','vine');
-    showImage('youwasattheclubb','youwasattheclub');
-    showImage('india','spongbon');
+    showImage('lingus','vine',4);
+    showImage('youwasattheclubb','youwasattheclub',10);
+    showImage('india','spongbon',7);
 },1000);
 
 
